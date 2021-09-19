@@ -10,7 +10,7 @@ interface ILeadsContext {
 const LeadsContext = createContext<ILeadsContext>({} as ILeadsContext)
 
 const LeadsProvider: React.FC = ({ children }) => {
-    const { data: leads } = useFetch<ILead[]>(`${process.env.API_URL}/leads/list`)
+    const { data: leads } = useFetch<ILead[]>(`${process.env.NEXT_PUBLIC_API_URL}/leads/list`)
 
     return (
         <LeadsContext.Provider

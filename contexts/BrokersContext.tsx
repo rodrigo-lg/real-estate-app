@@ -10,7 +10,7 @@ interface IBrokersContext {
 const BrokersContext = createContext<IBrokersContext>({} as IBrokersContext)
 
 const BrokersProvider: React.FC = ({ children }) => {
-    const { data: brokers } = useFetch<IBroker[]>(`${process.env.API_URL}/brokers/list`)
+    const { data: brokers } = useFetch<IBroker[]>(`${process.env.NEXT_PUBLIC_API_URL}/brokers/list`)
 
     return (
         <BrokersContext.Provider
