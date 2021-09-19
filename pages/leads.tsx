@@ -17,7 +17,8 @@ import {
     Text,
     Button,
     useDisclosure,
-    Link
+    Link,
+    Tooltip
 } from '@chakra-ui/react'
 import { ArrowDownIcon, ArrowUpIcon } from '@chakra-ui/icons'
 
@@ -160,7 +161,9 @@ const Leads: NextPage = () => {
                                             onClick={() => handleSort('name')}
                                         >
                                             {sortingIcon('name')}
-                                            Name
+                                            <Tooltip label="Sort by name" placement="top-end">
+                                                Name
+                                            </Tooltip>
                                         </Th>
                                         <Th>E-mail</Th>
                                         <Th>Phone</Th>
