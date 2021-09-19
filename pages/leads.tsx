@@ -174,7 +174,7 @@ const Leads: NextPage = () => {
                                     {sortedLeads.map(lead => (
                                         <Tr key={lead.key}>
                                             <Td pl={10}>{lead.name}</Td>
-                                            <Td pl={10}>{lead.email}</Td>
+                                            <Td>{lead.email}</Td>
                                             <Td>
                                                 <Link
                                                     href={`https://wa.me/${lead.int_code + lead.phone}`}
